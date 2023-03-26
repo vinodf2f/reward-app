@@ -19,7 +19,12 @@ export default function App() {
   };
 
   const onGiveRewards = ({ to, amount, message }) => {
-    const newReward = prepareRewardObject({ amount, message, to, USER_INFO });
+    const newReward = prepareRewardObject({
+      amount,
+      message,
+      to,
+      userInfo: USER_INFO,
+    });
     setRewards([...rewards, newReward]);
     setBottomSheet(false);
   };
